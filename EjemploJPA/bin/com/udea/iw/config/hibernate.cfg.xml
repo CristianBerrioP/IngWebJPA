@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<!-- Requeridas para trabajar con hibernate -->
+    	<property name="connection.driver_class">
+    		com.mysql.jdbc.Driver
+    	</property>
+    	<property name="connection.url">
+    		jdbc:mysql://localhost:3306/Reizzel
+    	</property>
+    	<property name="connection.username">
+    		root
+    	</property>
+    	<property name="connection.password">
+    		root
+    	</property>
+    	<!-- Extras -->
+    	<!-- Deducir el motor de base de datos -->
+    	<property name="dialect">
+    		org.hibernate.dialect.MySQLDialect
+    	</property>
+    	<!-- Ver las sentencias que se envian a la base de datos -->
+    	<property name="show_sql">
+    		true
+    	</property>
+    </session-factory>
+</hibernate-configuration>
