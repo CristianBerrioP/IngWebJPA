@@ -9,7 +9,7 @@
     		com.mysql.jdbc.Driver
     	</property>
     	<property name="connection.url">
-    		jdbc:mysql://localhost:3306/Reizzel
+    		jdbc:mysql://localhost:3306/ciudades
     	</property>
     	<property name="connection.username">
     		root
@@ -26,5 +26,6 @@
     	<property name="show_sql">
     		true
     	</property>
+    	<mapping resource="com/udea/iw/dto/CiudadDTO.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>
