@@ -27,5 +27,7 @@
     		true
     	</property>
     	<mapping resource="com/udea/iw/dto/CiudadDTO.hbm.xml"></mapping>
+    	<mapping resource="com/udea/iw/dto/RolDTO.hbm.xml"></mapping>
+    	<mapping resource="com/udea/iw/dto/UsuarioDTO.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

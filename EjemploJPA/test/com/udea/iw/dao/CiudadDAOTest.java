@@ -10,7 +10,7 @@ import com.udea.iw.Exception.ReizzelException;
 import com.udea.iw.dao.imp.CiudadDAOImp;
 import com.udea.iw.dto.CiudadDTO;
 
-public class ciudadDAOTest {
+public class CiudadDAOTest {
 	@Test
 	public void testObtener(){
 		CiudadDAOImp ciudad = null;
