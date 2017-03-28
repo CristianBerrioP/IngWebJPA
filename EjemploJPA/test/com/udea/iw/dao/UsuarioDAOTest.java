@@ -19,7 +19,7 @@ public class UsuarioDAOTest {
 			usuario =new UsuarioDAOImp();
 			user = usuario.obtener(login);
 			assertTrue(user!=null);
-			System.out.println(user.getRol());
+			System.out.println(user.getNombres()+"-"+user.getRol().getNombre());
 		}catch(ReizzelException e){
 			e.printStackTrace();
 			fail(e.getMessage());

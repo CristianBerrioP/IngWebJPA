@@ -17,7 +17,7 @@
         <property name="contrasena" type="java.lang.String">
             <column name="CONTRASENA" length="125" not-null="false"/>
         </property>
-        <many-to-one class="com.udea.iw.dto.RolDTO" name="rol">
+        <many-to-one class="com.udea.iw.dto.RolDTO" name="rol" lazy="proxy" fetch="join">
             <column name="ROL" length="12" not-null="false"/>
         </many-to-one>
     </class>
