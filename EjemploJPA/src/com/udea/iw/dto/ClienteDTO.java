@@ -1,6 +1,7 @@
 package com.udea.iw.dto;
 
 import java.util.Date;
+import java.util.Set;
 
 public class ClienteDTO {
 	private String cedula;
@@ -14,6 +15,14 @@ public class ClienteDTO {
 	private Boolean eliminado;
 	private UsuarioDTO usuarioElimina;
 	private Date fechaEliminacion;
+	private Set<DireccionesDTO> direcciones;
+	
+	public Set<DireccionesDTO> getDirecciones() {
+		return direcciones;
+	}
+	public void setDirecciones(Set<DireccionesDTO> direcciones) {
+		this.direcciones = direcciones;
+	}
 	public String getCedula() {
 		return cedula;
 	}

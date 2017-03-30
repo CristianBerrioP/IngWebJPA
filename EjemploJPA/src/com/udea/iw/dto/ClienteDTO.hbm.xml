@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 16/03/2017 01:20:53 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.udea.iw.dto.CiudadDTO" table="ciudades">
+    <class name="com.udea.iw.dto.ClienteDTO" table="clientes">
         <id name="cedula" type="java.lang.String">
             <column name="CEDULA" length="15"/>
             <generator class="assigned" />
@@ -36,7 +36,11 @@
             <column name="USUARIOELIMINA" length="15"/>
         </many-to-one>
         <property name="fechaEliminacion" type="java.util.Date">
-            <column name="FECHAELIMINACION" not-null="true"/>
+            <column name="FECHAELIMINACION" not-null="false"/>
         </property>
+        <set name="direcciones">
+        	<key column="CLIENTE"></key>
+        	<one-to-many class="com.udea.iw.DireccionesDTO"/>
+        </set>
     </class>
 </hibernate-mapping>

@@ -3,13 +3,14 @@ package com.udea.iw.dao;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.util.Date;
 import java.util.List;
-
 import org.junit.Test;
 
 import com.udea.iw.Exception.ReizzelException;
 import com.udea.iw.dao.imp.ClienteDAOImp;
 import com.udea.iw.dto.ClienteDTO;
+import com.udea.iw.dto.UsuarioDTO;
 
 public class ClienteDAOTest {
 	@Test
