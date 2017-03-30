@@ -39,7 +39,7 @@
             <column name="FECHAELIMINACION" not-null="false"/>
         </property>
         <set name="direcciones">
-        	<key column="CLIENTE"></key>
+        	<key column="CEDULA"></key>
         	<one-to-many class="com.udea.iw.DireccionesDTO"/>
         </set>
     </class>
