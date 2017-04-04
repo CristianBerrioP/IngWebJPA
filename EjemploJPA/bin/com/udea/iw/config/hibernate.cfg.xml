@@ -30,5 +30,6 @@
     	<mapping resource="com/udea/iw/dto/RolDTO.hbm.xml"></mapping>
     	<mapping resource="com/udea/iw/dto/UsuarioDTO.hbm.xml"></mapping>
     	<mapping resource="com/udea/iw/dto/ClienteDTO.hbm.xml"></mapping>
+    	<mapping resource="com/udea/iw/dto/DireccionesDTO.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

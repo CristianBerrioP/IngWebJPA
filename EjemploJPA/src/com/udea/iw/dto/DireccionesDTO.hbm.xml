@@ -8,7 +8,7 @@
         	<key-property name="codigo" type="java.lang.Long">
         		<column name="CODIGO" length="12"/>
         	</key-property>
-        	<key-many-to-one name="Cliente" class="com.udea.iw.ClienteDTO">
+        	<key-many-to-one name="Cliente" class="com.udea.iw.dto.ClienteDTO">
         		<column name="CLIENTE"></column>
         	</key-many-to-one>
         </composite-id>
@@ -21,8 +21,8 @@
         <property name="ciudad" type="java.lang.Long">
             <column name="CIUDAD" length="12" not-null="false"/>
         </property>
-        <property name="preferida" type="java.lang.Boolean">
-            <column name="PREFERIDA" not-null="false"/>
+        <property name="preferido" type="java.lang.Boolean">
+            <column name="PREFERIDO" not-null="false"/>
         </property>
     </class>
 </hibernate-mapping>

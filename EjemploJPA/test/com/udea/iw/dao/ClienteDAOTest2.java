@@ -19,7 +19,7 @@ public class ClienteDAOTest2 {
 		UsuarioDTO usuario = null;
 		try{
 			cliente = new ClienteDTO();
-			cliente.setCedula("123456789");
+			cliente.setCedula("987654321");
 			cliente.setNombres("elver");
 			cliente.setApellidos("ELVERAPELLIDO");
 			cliente.setEmail("elver@udea.com");

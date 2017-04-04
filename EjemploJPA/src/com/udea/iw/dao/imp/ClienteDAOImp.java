@@ -40,7 +40,7 @@ public class ClienteDAOImp implements ClienteDAO{
 		try{
 			session = DataSource.getInstance().getSession();//Se obtiene la sesion
 			tx = session.beginTransaction();//Inicializa la transaccion
-			session.saveOrUpdate(cliente);
+			session.save(cliente);
 			tx.commit();//Realizar el cambio en la base de datos
 		}catch(HibernateException e){
 			throw new ReizzelException("Error en la transaccion guardando el cliente", e);

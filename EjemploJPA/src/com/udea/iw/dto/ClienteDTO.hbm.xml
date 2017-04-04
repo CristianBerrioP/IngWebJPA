@@ -39,8 +39,8 @@
             <column name="FECHAELIMINACION" not-null="false"/>
         </property>
         <set name="direcciones">
-        	<key column="CEDULA"></key>
-        	<one-to-many class="com.udea.iw.DireccionesDTO"/>
+        	<key column="CLIENTE"></key>
+        	<one-to-many class="com.udea.iw.dto.DireccionesDTO"/>
         </set>
     </class>
 </hibernate-mapping>
