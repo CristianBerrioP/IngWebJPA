@@ -9,14 +9,15 @@
 
 	<bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><!-- Bean para la fuente de datos -->
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/ciudades"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/ciudades"></property><!-- Asegurar el nombre de la bd -->
+		<property name="username" value="root"></property><!-- Asegurar el usuario -->
+		<property name="password" value="root"></property><!-- Asegurar la contraseña -->
 	</bean> 
 	<bean id="sessionFactoryBean" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSourceBean"></property>
 		<property name="mappingResources">
 			<list>
+				<!-- Se ingresan los mapeos sin comillas -->
 				<value>com/udea/iw/dto/CiudadDTO.hbm.xml</value>
 				<value>com/udea/iw/dto/RolDTO.hbm.xml</value>
 				<value>com/udea/iw/dto/UsuarioDTO.hbm.xml</value>
