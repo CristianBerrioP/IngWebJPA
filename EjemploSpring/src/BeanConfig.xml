@@ -39,4 +39,10 @@
 	<bean id="ciudadDAOBean" class="com.udea.iw.dao.imp.CiudadDAOImp"><!-- Bean para inyectar la referencia al factory de ciudad -->
 		<property name="sessionFactory" ref="sessionFactoryBean"></property>
 	</bean>
+	<bean id="usuarioDAOBean" class="com.udea.iw.dao.imp.UsuarioDAOImp"><!-- Bean para inyectar la referencia al factory de ciudad -->
+		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>
+	<bean id="clienteDAOBean" class="com.udea.iw.dao.imp.ClienteDAOImp"><!-- Bean para inyectar la referencia al factory de ciudad -->
+		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>
 </beans>
