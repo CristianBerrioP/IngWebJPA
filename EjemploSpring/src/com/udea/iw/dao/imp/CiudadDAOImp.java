@@ -11,21 +11,28 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 import com.udea.iw.Exception.ReizzelException;
+import com.udea.iw.dao.CiudadDao;
 import com.udea.iw.dto.CiudadDTO;
 
-public class CiudadDAOImp {
+//@Author Cristian Berrio Pulido - cbp453252.hdrl@gmail.com @Version = 1.0
+
+//Clase de implementacion de CiudadDAO
+public class CiudadDAOImp implements CiudadDao{
 	
-	private SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;//Usa el patron de diseño factory para el manejo de sesiones
 	
+	
+	//Getter y setter para sessionFactory
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
 	//Metodo para obtener todas las ciudades
 	public List<CiudadDTO> obtener() throws ReizzelException{
-		List<CiudadDTO> lista = new ArrayList<CiudadDTO>();
+		List<CiudadDTO> lista = new ArrayList<CiudadDTO>();//Lista de Ciudades
 		Session session=null;
 		try{
 			session = sessionFactory.getCurrentSession();//Se obtiene la sesion
@@ -36,6 +43,7 @@ public class CiudadDAOImp {
 		}
 		return lista;
 	}
+	
 	//Metodo para obtener solo 1 ciudad con codigo como parametro
 	public CiudadDTO obtener(long codigo) throws ReizzelException{
 		CiudadDTO ciudad= new CiudadDTO();
@@ -70,7 +78,7 @@ public class CiudadDAOImp {
 		Session session=null;
 		try{
 			session = sessionFactory.getCurrentSession();//Se obtiene la sesion
-			session.saveOrUpdate(ciudad);
+			session.save(ciudad);//Guarda la ciudad
 		}catch(HibernateException e){
 			throw new ReizzelException("Error en la transaccion", e);
 		}
@@ -80,7 +88,7 @@ public class CiudadDAOImp {
 		Session session=null;
 		try{
 			session = sessionFactory.getCurrentSession();//Se obtiene la sesion
-			session.delete(ciudad);
+			session.delete(ciudad);//Borra la ciudad
 		}catch(HibernateException e){
 			throw new ReizzelException("Error en la transaccion", e);
 		}

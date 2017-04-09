@@ -13,10 +13,15 @@ import com.udea.iw.Exception.ReizzelException;
 import com.udea.iw.dao.ClienteDAO;
 import com.udea.iw.dto.ClienteDTO;
 
+//@Author Cristian Berrio Pulido - cbp453252.hdrl@gmail.com @Version = 1.0
+
+//Clase de implementacion de ClienteDAO
 public class ClienteDAOImp implements ClienteDAO{
 	
-	private SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;//Usa el patron de diseño factory para el manejo de sesiones
 	
+	
+	//Getter y setter de sessionFactory
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
@@ -25,6 +30,7 @@ public class ClienteDAOImp implements ClienteDAO{
 	}
 	
 	@Override
+	//Metodo para obtener la lista de clientes
 	public List<ClienteDTO> obtener() throws ReizzelException {
 		List<ClienteDTO> clientes = new ArrayList<ClienteDTO>();
 		Session session=null;
@@ -41,6 +47,7 @@ public class ClienteDAOImp implements ClienteDAO{
 	}
 
 	@Override
+	//Metodo para guardar un cliente
 	public void guardar(ClienteDTO cliente) throws ReizzelException {
 		Session session=null;
 		try{

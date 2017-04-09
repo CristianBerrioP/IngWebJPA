@@ -12,10 +12,14 @@ import org.hibernate.criterion.Restrictions;
 import com.udea.iw.Exception.ReizzelException;
 import com.udea.iw.dto.UsuarioDTO;
 
+//@Author Cristian Berrio Pulido - cbp453252.hdrl@gmail.com @Version = 1.0
+
+//Clase de implementacion de UsuarioDAO
 public class UsuarioDAOImp {
 	
-	private SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;//Usa el patron de diseño factory para el manejo de sesiones
 	
+	//Getter y setter para sessionFactory
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
