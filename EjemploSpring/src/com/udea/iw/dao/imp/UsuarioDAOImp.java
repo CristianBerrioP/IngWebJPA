@@ -37,10 +37,6 @@ public class UsuarioDAOImp {
 			lista=criteria.list();
 		}catch(HibernateException e){
 			throw new ReizzelException("Error consultando ciudades", e);
-		}finally{
-			if(session!=null){
-				session.close();
-			}
 		}
 		return lista;
 	}
@@ -56,10 +52,6 @@ public class UsuarioDAOImp {
 			//uniqueResult retorna un objeto tipo "object"
 		}catch(HibernateException e){
 			throw new ReizzelException("Error consultando ciudades", e);
-		}finally{
-			if(session!=null){
-				session.close();
-			}
 		}
 		return usuario;
 	}
